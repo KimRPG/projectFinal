@@ -1,4 +1,4 @@
-/* 전체 페이지 스타일 */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -6,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* 제목 스타일 */
 h1 {
     background-color: #333;
     color: white;
@@ -15,7 +14,6 @@ h1 {
     margin: 0;
 }
 
-/* 헤더 링크 스타일 */
 .header {
     background-color: #333;
     padding: 10px;
@@ -28,7 +26,6 @@ h1 {
     margin: 0 15px;
 }
 
-/* 학생 정보 테이블 스타일 */
 .student-info {
     max-width: 600px;
     margin: 0 auto;
@@ -59,25 +56,25 @@ h1 {
     background-color: #333;
     color: white;
 }
-/* 버튼 스타일 */
+
 button {
-    background-color: black; /* 검은색 배경 */
-    color: white; /* 흰색 텍스트 */
+    background-color: black; 
+    color: white; 
     border: none;
     border-radius: 3px;
     padding: 10px;
     cursor: pointer;
-    text-decoration: none; /* 링크 텍스트에 밑줄 제거 */
+    text-decoration: none; 
 }
 
 button:hover {
-    background-color: #333; /* 마우스 호버 시 색 변경 */
+    background-color: #333;
 }
 
 /* 링크 스타일 */
 button a {
-    color: white; /* 버튼 내의 링크 텍스트 색상 설정 */
-    text-decoration: none; /* 링크 텍스트에 밑줄 제거 */
+    color: white;
+    text-decoration: none; 
 }
 
 button a:hover {

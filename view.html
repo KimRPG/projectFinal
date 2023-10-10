@@ -53,16 +53,12 @@
 
     <script>
         function confirmDelete() {
-            // 확인 창을 띄우고 사용자의 선택을 확인합니다.
             var isConfirmed = confirm("정말로 삭제하시겠습니까?");
-            
-            // 사용자가 확인을 누르면 삭제 작업을 수행합니다.
+
             if (isConfirmed) {
-                // 삭제 작업을 여기에 수행하십시오.
-                alert("삭제되었습니다."); // 예시로 삭제되었다는 알림을 표시합니다.
+                alert("삭제되었습니다."); 
                 window.location.href = 'index.html';
             } else {
-                // 사용자가 취소를 누른 경우 아무 작업도 하지 않습니다.
                 alert("삭제가 취소되었습니다.");
             }
         }

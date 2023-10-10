@@ -1,12 +1,10 @@
-/* 전체 페이지 스타일 */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
-
-/* 제목 스타일 */
 h1 {
     background-color: #333;
     color: white;
@@ -15,7 +13,6 @@ h1 {
     margin: 0;
 }
 
-/* 헤더 링크 스타일 */
 .header {
     background-color: #333;
     padding: 10px;
@@ -27,8 +24,6 @@ h1 {
     text-decoration: none;
     margin: 0 15px;
 }
-
-/* 학생 정보 편집 폼 스타일 */
 .student-edit {
     max-width: 600px;
     margin: 0 auto;
