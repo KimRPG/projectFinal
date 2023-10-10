@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add friend</title>
+    <link rel="stylesheet" href="add.css">
+    <link rel="stylesheet" href="my.css" media="(max-width: 768px)">
+
+</head>
+
+<body class="addbody">
+    <div>
+        <h1>한동대 학생들</h1>
+        <div class="header">
+        <a class="headerA" href="index.html">index</a>
+        <a class="headerA" href="add.html">add</a>
+        <a class="headerA" href="view.html">view</a>
+        <a class="headerA" href="edit.html">edit</a>
+    </div>
+    <h2 class="h1h1">친구 추가하기</h2>
+    <form id="postForm" onsubmit="validateForm(event)">
+
+        <h2 class="h1h1">Add friend</h2>
+        <div class="container">
+
+            <div class="div">
+                <label class="label" for="postId">ID: </label>
+                <input style="width:60%; margin-left: 16px;" class="text" type="text" id="id" name="id" required> 
+            </div>
+        
+        <div class="div">
+            <label class="label" for="postWord">이름:</label>
+            <input style="width:60%" class="text" type="text" id="name" name="name" required> 
+        </div>
+        <div class="div">
+            <label class="label" for="postWord">학번:</label>
+            <input style="width:60%" class="text" type="text" id="hguid" name="hguid" required>
+        </div>
+            <div class="div">
+                <label class="label" for="postlevel">나이:</label>
+                <input style="width:60%; margin-top:10px;" class="text" type="range" id="age" name="age" required>
+                <span id="ageValue">0</span> 
+            </div>
+
+
+        <div class="webbox">
+            <div class="div">
+                <label class="label" for="postMeaning">학부:</label>
+                <input style="width:60%"  class="text" type="text" id="major" name="major" required>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+            <input type="submit" value="추가" id="submitButton" style="width: 60px; height: 30px; background-color: skyblue; outline: none; border: none;">
+        </div>
+    </div>
+    </form>
+
+    <script>
+        function updateAuthorValue() {
+            var authorInput = document.getElementById('age');
+            var authorValue = document.getElementById('ageValue');
+            authorValue.textContent = authorInput.value;
+        }
+        function validateForm(event) {
+            event.preventDefault();
+            var id = document.getElementById('id').value;
+            var name = document.getElementById('name').value;
+            var hguid = document.getElementById('hguid').value;
+            var age = document.getElementById('age').value;
+            var major = document.getElementById('major').value;
+            var submitButton = document.getElementById('submitButton');
+            if (id.trim() === '' || name.trim() === '' || hguid.trim() === '' || age.trim() === '' || major.trim() === '') {
+                alert('모든 필드를 입력해야 합니다!');
+                return false;
+            }
+            else {
+                submitButton.style.backgroundColor = 'blue';
+                alert('게시물이 추가되었습니다!');
+                window.location.href = 'index.html';
+            }
+        }
+
+        var authorInput = document.getElementById('age');
+        authorInput.addEventListener('input', updateAuthorValue);
+        updateAuthorValue();
+    </script>
+</body>
+
+</html>

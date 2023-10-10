@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit 학생 정보</title>
+    <link rel="stylesheet" type="text/css" href="edit.css">
+    <link rel="stylesheet" href="my.css" media="(max-width: 768px)">
+</head>
+<body>
+    <div>
+        <h1>학생 정보</h1>
+        <div class="header">
+            <a class="headerA" href="index.html">index</a>
+            <a class="headerA" href="add.html">add</a>
+            <a class="headerA" href="view.html">view</a>
+            <a class="headerA" href="edit.html">edit</a>
+        </div>
+    </div>
+    <div class="student-edit">
+        <h2>학생 정보 편집</h2>
+        <form id="postForm" onsubmit="validateForm(event)">
+            <label for="name">Id:</label>
+            <input type="text" id="id" name="id" value="1" required><br>
+
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" value="김현승" required><br>
+
+            <label for="hguid">학번:</label>
+            <input type="text" id="hguid" name="hguid" value="22000202" required><br>
+
+            <label for="age">나이:</label>
+            <input type="text" id="age" name="age" value="25" required><br>
+
+            <label for="major">학부:</label>
+            <input type="text" id="major" name="major" value="전산전자공학부" required><br>
+
+            <input type="submit" value="저장">
+        </form>
+    </div>
+
+    <script>
+        function updateAuthorValue() {
+            var authorInput = document.getElementById('age');
+            var authorValue = document.getElementById('ageValue');
+            authorValue.textContent = authorInput.value;
+        }
+        function validateForm(event) {
+            event.preventDefault();
+            var id = document.getElementById('id').value;
+            var name = document.getElementById('name').value;
+            var hguid = document.getElementById('hguid').value;
+            var age = document.getElementById('age').value;
+            var major = document.getElementById('major').value;
+            var submitButton = document.getElementById('submitButton');
+            if (id.trim() === '' || name.trim() === '' || hguid.trim() === '' || age.trim() === '' || major.trim() === '') {
+                alert('모든 필드를 입력해야 합니다!');
+                return false;
+            }
+            else {
+                var isConfirmed = confirm("게시물을 수정할까요?");
+                            
+            // 사용자가 확인을 누르면 삭제 작업을 수행합니다.
+            if (isConfirmed) {
+                // 삭제 작업을 여기에 수행하십시오.
+                alert("수정되었습니다."); // 예시로 삭제되었다는 알림을 표시합니다.
+                window.location.href = 'index.html';
+            } else {
+                // 사용자가 취소를 누른 경우 아무 작업도 하지 않습니다.
+                alert("수정이 취소되었습니다.");
+            }
+        }
+        
+        }
+
+        var authorInput = document.getElementById('age');
+        authorInput.addEventListener('input', updateAuthorValue);
+        updateAuthorValue();
+    </script>
+</body>
+</html>

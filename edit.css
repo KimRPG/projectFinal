@@ -1,0 +1,76 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* 제목 스타일 */
+h1 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+/* 헤더 링크 스타일 */
+.header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.headerA {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* 학생 정보 편집 폼 스타일 */
+.student-edit {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.student-edit h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.student-edit form {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-edit label {
+    margin-bottom: 5px;
+}
+
+.student-edit input[type="text"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.student-edit input[type="submit"] {
+    width: 100px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.student-edit input[type="submit"]:hover {
+    background-color: #555;
+}
